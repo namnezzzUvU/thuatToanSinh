@@ -21,7 +21,16 @@ void display() {
      }
      cout<<endl; 
 }
-
+void Swap(int &a,int &b) {
+    int temp=a;
+    a=b;
+    b=temp;
+}
+void Reverse(int i) {
+    for(int j=i;j<=(n+i)/2;++j) {
+        Swap(arr[j],arr[n+i-j]);
+    }
+}
 void genNext() {
     int i=n-1;
     while(i>=1&&arr[i]>arr[i+1]) {
@@ -31,8 +40,8 @@ void genNext() {
     while(arr[k]<arr[i]) {
         k--;
     }
-    swap(arr[k],arr[i]);
-    reverse(arr+i+1,arr+n+1);
+    Swap(arr[k],arr[i]);
+    Reverse(i+1);
 }
 int main() {
     init();

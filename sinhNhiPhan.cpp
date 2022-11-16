@@ -1,3 +1,15 @@
+/*
+tìm từ trái sang, bắt đầu với i=n;
+nếu arr[i]=1, thì cứ cho arr[i]=0
+và --i, ở ptu đầu tiên khác 1, ta 
+dừng vòng lặp và cho nó là 1.
+ví dụ, 
+00000
+00001
+00010
+00011
+00100
+*/
 #include<bits/stdc++.h>
 using namespace std;
 int arr[100],n;
